@@ -42,22 +42,22 @@ def find_last_finished_fotmob_match():
         )
         resp.raise_for_status()
         data = resp.json()
-        all_matches = data.get("matches", {}).get("allMatches", [])
+        all_matches = data.get("fixtures", {}).get("allMatches", [])
 
         # Bitmiş maçları filtrele
         finished = [m for m in all_matches if m.get("status", {}).get("finished")]
-
+        
         if not finished:
             return None
 
         # startDate'e göre sırala (en son bitmiş maçı seç)
         latest = sorted(finished, key=lambda m: m.get("startDate", ""))[-1]
-
+        
         # matchId döndür
         return int(latest.get("id"))
 
     except Exception as e:
-        st.error(f"FotMob maç arama hatası: {e}")
+        print(f"FotMob maç arama hatası: {e}")
         return None
 
 last_finished_fotmob_match_id = find_last_finished_fotmob_match()
@@ -336,6 +336,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
