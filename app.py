@@ -203,8 +203,6 @@ div[data-testid="stDownloadButton"] > button:active {
 </style>
 """, unsafe_allow_html=True)
 
-# --- Cache’lenmiş fonksiyonlar ---
-@st.cache_data(show_spinner=False)
 def get_all_played_matches_cached():
     return get_finished_matches()  # DataFrame döndürmeli
 
@@ -336,6 +334,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
