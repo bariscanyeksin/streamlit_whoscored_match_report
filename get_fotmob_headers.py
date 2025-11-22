@@ -28,7 +28,9 @@ def get_version_number():
     soup = BeautifulSoup(response.text, 'html.parser')
     version_element = soup.find('span', class_=lambda cls: cls and 'VersionNumber' in cls)
     if version_element:
-        return version_element.text.strip()
+        text = version_element.get_text()
+        text = text.encode("ascii", "ignore").decode()  # emoji atar
+        return text.strip()
     else:
         return None
     
@@ -67,7 +69,7 @@ def create_xmas_header(url, password):
             return f"Error generating signature: {e}"
         
 def headers_leagues(league_id):
-    api_url = f"api/leagues?id={league_id}"
+    api_url = f"/api/data/leagues?id={league_id}&ccode3=TUR"
     xmas_value = create_xmas_header(api_url, xmas_pass)
     
     headers = {
@@ -76,15 +78,15 @@ def headers_leagues(league_id):
         'cache-control': 'no-cache',
         'pragma': 'no-cache',
         'priority': 'u=1, i',
-        'referer': f'https://www.fotmob.com/',
-        'sec-ch-ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+        'referer': 'https://www.fotmob.com/tr/leagues/71/overview/super-lig',
+        'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
         'x-mas': f'{xmas_value}',
     }
-    
+        
     return headers
