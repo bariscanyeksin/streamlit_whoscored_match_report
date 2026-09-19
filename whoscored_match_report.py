@@ -549,7 +549,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
         big_chances_missed = next(item['stats'] for item in top_stats if item['key'] == 'big_chance_missed_title')
         touches_in_opposition_box = next(item['stats'] for item in pass_stats if item['key'] == 'touches_opp_box')
         accurate_passes = next(item['stats'] for item in top_stats if item['key'] == 'accurate_passes')
-        fouls_committed = next(item['stats'] for item in top_stats if item['key'] == 'fouls')
+        #fouls_committed = next(item['stats'] for item in top_stats if item['key'] == 'fouls')
         corners = next(item['stats'] for item in top_stats if item['key'] == 'corners')
 
         # Değişkenlere atama
@@ -561,7 +561,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
         big_chances_missed_home, big_chances_missed_away = big_chances_missed
         touches_in_opposition_box_home, touches_in_opposition_box_away = touches_in_opposition_box
         accurate_passes_home, accurate_passes_away = accurate_passes
-        fouls_committed_home, fouls_committed_away = fouls_committed
+        #fouls_committed_home, fouls_committed_away = fouls_committed
         corners_home, corners_away = corners
         
         back_box = dict(boxstyle='round, pad=0.4', facecolor=to_rgba(blue, alpha=0.3), alpha=0.5)
