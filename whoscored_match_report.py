@@ -121,7 +121,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
         return headers
 
     def getFotmobData(fotmob_match_id):
-        fotmob_match_url = f"https://www.fotmob.com/api/matchDetails?matchId={fotmob_match_id}"
+        fotmob_match_url = f"https://www.fotmob.com/api/data/matchDetails?matchId={fotmob_match_id}"
         headers = {
             'sec-ch-ua-platform': '"Windows"',
             'Referer': 'https://www.fotmob.com/tr/leagues/71/overview/super-lig',
