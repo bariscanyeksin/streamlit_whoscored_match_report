@@ -98,7 +98,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
                 return f"Error generating signature: {e}"
 
     def headers_matchDetails(match_id):
-        api_url = "/api/matchDetails?matchId=" + str(match_id)
+        api_url = "/api/data/matchDetails?matchId=" + str(match_id)
         xmas_value = create_xmas_header(api_url, xmas_pass)
         
         headers = {
