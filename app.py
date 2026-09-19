@@ -231,8 +231,11 @@ if not matches.empty:
 
     homeTeamName = selected_match['homeName']
     awayTeamName = selected_match['awayName']
+    
+    raw_date = str(selected_match['utcTime']).replace(".000", "")
+    
     formatted_date = datetime.strptime(
-        selected_match['utcTime'], "%Y-%m-%dT%H:%M:%SZ"
+        raw_date, "%Y-%m-%dT%H:%M:%SZ"
     ).strftime("%d-%m-%Y")
     whoscored_match_id = selected_match['whoscoredId']
 
