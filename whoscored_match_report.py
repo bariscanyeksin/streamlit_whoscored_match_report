@@ -964,7 +964,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
         ax.set_title(f"{teamName} Pas Haritası", color=line_color, size=25, fontweight='bold', fontproperties=bold_prop, y=1.05)
         
         ax_text(text_x, text_y, f'''<En Yoğun Pas Bağlantısı: ><{most_pass_from} - {most_pass_to}>\n<Dikey Pas Oranı, Doğrudanlık: ><%{verticality}>
-            ''', color=line_color, highlight_textprops=[{'color':line_color}, {'color':col}, {'color':line_color}, {'color':col}], fontsize=12, ha='left', va='top', ax=ax, fontproperties=prop, linespacing=0.8)
+            ''', color=line_color, highlight_textprops=[{'color':line_color}, {'color':col}, {'color':line_color}, {'color':col}], fontsize=12, ha='left', va='top', ax=ax, fontproperties=prop, linespacing=0.5)
         
         return
 
