@@ -865,7 +865,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
             #ax.set_xlim(105.5, -0.5)  # Adjust x-limits after inversion
             ax.set_ylim(68.5, -0.5)   # Adjust y-limits after inversion
             text_x = 105.5  # Example x position for away team
-            text_y = 72.5  # Example y position for away team
+            text_y = 73  # Example y position for away team
             annotate_padding = -0.4
             def_line_ha_team_width = 'left'
             def_line_ha_team_height = 'right'
@@ -1061,15 +1061,15 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
             ax.invert_yaxis()
             col = awayColor
             ax.set_title(f"{away_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
-            text_padding = 1
+            text_padding = 2
             count_text_padding = 6
-            zone14_text_padding = 2.5
+            zone14_text_padding = 3
         else:
             col = homeColor
             ax.set_title(f"{home_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
-            text_padding = -1
+            text_padding = -2
             count_text_padding = -6
-            zone14_text_padding = -2.5
+            zone14_text_padding = -23
 
         # setting the count varibale
         z14 = 0
