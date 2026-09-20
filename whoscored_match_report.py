@@ -145,7 +145,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
     formatted_date = parsed_date.strftime("%d.%m.%Y")
     leagueName = general_data['leagueName']
     #leagueSeason = general_data['parentLeagueSeason']
-    leagueSeason = "2025/2026"
+    leagueSeason = "2026/2027"
     leagueString = f"{leagueName} - {leagueSeason}"
     weekString = f"{week}. Hafta  |  {formatted_date}"
     homeTeamName = general_data['homeTeam']['name']
@@ -1061,13 +1061,13 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
             ax.invert_yaxis()
             col = awayColor
             ax.set_title(f"{away_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
-            text_padding = 2
+            text_padding = 1.5
             count_text_padding = 6
             zone14_text_padding = 3
         else:
             col = homeColor
             ax.set_title(f"{home_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
-            text_padding = -2
+            text_padding = -1.5
             count_text_padding = -6
             zone14_text_padding = -3
 
