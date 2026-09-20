@@ -1060,13 +1060,13 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
             ax.invert_xaxis()
             ax.invert_yaxis()
             col = awayColor
-            ax.set_title(f"{away_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
+            ax.set_title(f"{away_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop, linespacing=0.8)
             text_padding = 2
             count_text_padding = 6
             zone14_text_padding = 3
         else:
             col = homeColor
-            ax.set_title(f"{home_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop)
+            ax.set_title(f"{home_team_name}\nZone14 & Half Space Pasları", color=line_color, fontweight='bold', fontproperties=bold_prop, linespacing=0.8)
             text_padding = -2
             count_text_padding = -6
             zone14_text_padding = -23
