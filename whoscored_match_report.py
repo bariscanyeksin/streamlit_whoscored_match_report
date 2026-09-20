@@ -865,7 +865,7 @@ def whoscored_match_report(whoscored_match_id, fotmob_match_id, fotmob_league_id
             #ax.set_xlim(105.5, -0.5)  # Adjust x-limits after inversion
             ax.set_ylim(68.5, -0.5)   # Adjust y-limits after inversion
             text_x = 105.5  # Example x position for away team
-            text_y = 73  # Example y position for away team
+            text_y = 70  # Example y position for away team
             annotate_padding = -0.4
             def_line_ha_team_width = 'left'
             def_line_ha_team_height = 'right'
